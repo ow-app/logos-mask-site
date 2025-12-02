@@ -3,42 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logos Mask - プライバシーポリシー</title>
+    <title>Logos Mask - 感情を、知性に変換するAIエージェント</title>
+    <meta name="description" content="SNS炎上対策・AI言い換えアプリ。あなたの本音を、洗練された理性（ロゴス）でコーティングします。">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; color: #333; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; color: #007AFF; }
-        p { margin-bottom: 10px; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #666; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --primary: #00C7BE; /* ミントグリーン */
+            --accent: #FF9500;  /* オレンジ */
+            --dark: #1C1C1E;
+            --gray: #8E8E93;
+            --bg: #F2F2F7;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Utility */
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
+        .badge-strategy { background: #E0F7FA; color: #006064; }
+        .badge-persona { background: #F3E5F5; color: #4A148C; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdfc 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(45deg, #00C7BE, #007AFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p { font-size: 1.2rem; color: var(--gray); margin-bottom: 30px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 24px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin-bottom: 20px; }
+
+        /* Section Styling */
+        section { padding: 60px 0; }
+        h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+        h3 { font-size: 1.2rem; margin-bottom: 10px; }
+
+        /* Strategy x Persona Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .list-group { list-style: none; padding: 0; }
+        .list-group li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: start;
+        }
+        .list-group li:last-child { border-bottom: none; }
+        .icon { font-size: 1.5rem; margin-right: 15px; width: 30px; }
+
+        /* Examples */
+        .example-box {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .chat-bubble {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .chat-label { font-size: 0.7rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; }
+        .arrow-down { text-align: center; font-size: 1.5rem; margin: 10px 0; opacity: 0.5; }
+
+        /* CTA */
+        .cta-btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: scale(1.05); }
+
+        /* Footer */
+        footer { background: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; color: var(--gray); border-top: 1px solid #ddd; }
+        footer a { color: var(--dark); text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-    <p>本アプリ「Logos Mask」（以下、当アプリ）における個人情報の取り扱いについて、以下の通り定めます。</p>
 
-    <h2>1. データの送信と利用</h2>
-    <p>当アプリは、ユーザーが入力したテキストをAIによる変換・判定を行う目的で、OpenAI社のAPIサーバーへ送信します。</p>
-    <ul>
-        <li>送信されたデータは、AIによる処理後に直ちに破棄されます。</li>
-        <li>当アプリの開発者がその内容を閲覧・保存することはありません。</li>
-        <li>AIの学習データとして利用されない設定（API利用）を行っています。</li>
-    </ul>
-
-    <h2>2. データの保存</h2>
-    <p>変換履歴や設定情報は、利用者の端末内（ローカルストレージ）にのみ保存されます。外部サーバーへバックアップ送信することは一切ありません。</p>
-
-    <h2>3. 第三者への提供</h2>
-    <p>法令に基づく場合を除き、利用者の同意なく第三者へ個人情報を提供することはありません。</p>
-
-    <h2>4. 免責事項</h2>
-    <p>当アプリの判定結果や変換内容は、AIによって生成されたものであり、その完全性や法的安全性を保証するものではありません。最終的な投稿の判断は利用者ご自身で行ってください。</p>
-
-    <h2>5. お問い合わせ</h2>
-    <p>本ポリシーに関するお問い合わせは、App Storeのサポートページよりお願いいたします。</p>
-
-    <div class="footer">
-        <p>制定日: 2025年11月28日</p>
-        <p>&copy; 2025 Logos Mask Dev Team</p>
+    <div class="hero">
+        <div class="container">
+            <img src="https://via.placeholder.com/120" alt="Logos Mask Icon" class="app-icon" style="background:#eee;"> <h1>Logos Mask</h1>
+            <p>その本音、AIが「知性」に変換します。<br>あなた専属のAI広報官。</p>
+            <a href="#" class="cta-btn">App Storeでダウンロード</a>
+        </div>
     </div>
+
+    <section>
+        <div class="container">
+            <h2 class="text-center">2つのダイヤルで、<br>最適な「言葉」を調合する。</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 40px;">
+                ただの敬語変換ではありません。<br>
+                「何を達成したいか（戦略）」と「誰が話すか（キャラ）」を組み合わせることで、<br>
+                あらゆるシチュエーションに対応する、あなただけの代理人を作り出します。
+            </p>
+
+            <div class="grid-2">
+                <div class="feature-card">
+                    <span class="badge badge-strategy">Step 1</span>
+                    <h3>戦略 (Strategy)</h3>
+                    <p>解決の「方向性」を決定します。</p>
+                    <ul class="list-group">
+                        <li>
+                            <span class="icon">🛡️</span>
+                            <div>
+                                <strong>リスク回避</strong>
+                                <div style="font-size:0.9rem; color:#666;">とにかく低姿勢に。謝罪と譲歩で、法的・社会的な炎上リスクをゼロにします。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🗡️</span>
+                            <div>
+                                <strong>建設的・論理</strong>
+                                <div style="font-size:0.9rem; color:#666;">感情を排除し、事実と要望だけを抽出。正論で毅然と主張したい時に。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🕊️</span>
+                            <div>
+                                <strong>大人の対応</strong>
+                                <div style="font-size:0.9rem; color:#666;">関係維持が最優先。クッション言葉を多用し、やんわりといなします。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">💨</span>
+                            <div>
+                                <strong>煙に巻く (ウィット)</strong>
+                                <div style="font-size:0.9rem; color:#666;">まともに取り合わず、洒落たジョークや比喩で相手の毒気を抜きます。</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="badge badge-persona">Step 2</span>
+                    <h3>キャラ (Persona)</h3>
+                    <p>文体の「フィルター」を着せ替えます。</p>
+                    <ul class="list-group">
+                        <li>
+                            <span class="icon">👔</span>
+                            <div>
+                                <strong>標準 / フランク</strong>
+                                <div style="font-size:0.9rem; color:#666;">ビジネスメール向けの丁寧語、または親しい友人向けのタメ口。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🤖</span>
+                            <div>
+                                <strong>冷徹AI</strong>
+                                <div style="font-size:0.9rem; color:#666;">事務的で無駄のない、完璧な秘書のようなトーン。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">☕️</span>
+                            <div>
+                                <strong>執事</strong>
+                                <div style="font-size:0.9rem; color:#666;">慇懃無礼なほど丁寧な、貴族の従者。「恐れながら申し上げます...」</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🖋️</span>
+                            <div>
+                                <strong>文豪</strong>
+                                <div style="font-size:0.9rem; color:#666;">明治時代の小説家のように、大袈裟でドラマチックな表現。</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🌌</span>
+                            <div>
+                                <strong>哲学者</strong>
+                                <div style="font-size:0.9rem; color:#666;">怒りを「宇宙の真理」や「概念」にすり替える、究極の理屈屋。</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #fff;">
+        <div class="container">
+            <h2>化学反応を楽しもう</h2>
+            <p class="text-center">入力：「金返せよ」</p>
+
+            <div class="grid-2">
+                <div class="example-box">
+                    <div class="chat-label">Setting A</div>
+                    <h3>🛡️ リスク回避 × ☕️ 執事</h3>
+                    <div class="chat-bubble">
+                        「大変恐縮ではございますが、以前お立て替えいたしました件につきまして、ご返済の目処はいかがでございましょうか？ こちらの不躾なお願いで誠に申し訳ございません。」
+                    </div>
+                    <p style="font-size:0.8rem; color:#aaa;">下から目線で、あくまで丁寧に。</p>
+                </div>
+
+                <div class="example-box">
+                    <div class="chat-label">Setting B</div>
+                    <h3>💨 煙に巻く × 🌌 哲学者</h3>
+                    <div class="chat-bubble">
+                        「金銭とは、所詮は人間が作り出した共同幻想に過ぎない。君の手元にないという『不在』こそが、逆にその価値を証明しているのではないだろうか？」
+                    </div>
+                    <p style="font-size:0.8rem; color:#aaa;">もはや返す気がなくなる。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2>その他の機能</h2>
+            <div class="grid-2" style="text-align: left; margin-top: 30px;">
+                <div class="feature-card">
+                    <h3>⚠️ リスクスコア判定</h3>
+                    <p>あなたの入力した言葉が、法的にどれくらい危険か（名誉毀損・侮辱など）を0〜100%で判定します。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 プライバシーファースト</h3>
+                    <p>入力データはAI変換のためだけに使用され、学習データにはなりません。履歴はあなたの端末内だけに保存されます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="privacy.html">プライバシーポリシー</a> | 
+                <a href="privacy.html">利用規約</a> | 
+                
+                <a href="https://forms.gle/kJrgM95LNdEbWQpK9" target="_blank" rel="noopener">お問い合わせ</a>
+            </p>
+            <p style="margin-top: 20px;">&copy; 2025 OpenWorks Ltd.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
